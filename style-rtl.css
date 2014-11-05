@@ -31,19 +31,19 @@ ol {
 /**
  * Branding.
  */
-#branding {
+#header {
   padding: 20px 20px 0 20px;
 }
 
-#branding div.block {
+#header div.block {
   float: left;
   padding-left: 0;
   padding-right: 10px;
 }
-#branding div.block form div.form-item {
+#header div.block form div.form-item {
   float: right;
 }
-#branding div.block form input.form-text {
+#header div.block form input.form-text {
   margin-left: 10px;
   margin-right: 0;
 }
@@ -58,7 +58,7 @@ ol {
 /**
  * Page title.
  */
-#branding h1.page-title {
+#header h1.page-title {
   float: right;
 }
 
@@ -205,7 +205,7 @@ ol.task-list li.active {
 }
 
 /* Overlay theming */
-.overlay #branding div.breadcrumb {
+.overlay #header div.breadcrumb {
   float: right;
 }
 .overlay ul.secondary {

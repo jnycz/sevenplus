@@ -11,7 +11,7 @@
 
   <?php print $page_top; ?>
 
-  <div id="branding">
+  <div id="header">
     <?php if ($title): ?><h1 class="page-title"><?php print $title; ?></h1><?php endif; ?>
   </div>
 

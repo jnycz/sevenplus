@@ -181,37 +181,37 @@ pre {
 /**
  * Branding.
  */
-#branding {
+#header {
   overflow: hidden;
-  padding: 20px 20px 0 20px; /* LTR */
+  padding: 1em 1em .5em 1em; /* LTR */
   position: relative;
   background-color: #e0e0d8;
 }
-#branding div.breadcrumb {
+#header div.breadcrumb {
   font-size: 0.846em;
   padding-bottom: 5px;
 }
-#branding div.block {
+#header div.block {
   position: relative;
   float: right; /* LTR */
   width: 240px;
   padding-left: 10px; /* LTR */
   background: #333;
 }
-#branding div.block form label {
+#header div.block form label {
   display: none;
 }
-#branding div.block form div.form-item {
+#header div.block form div.form-item {
   float: left; /* LTR */
   border: 0;
   margin: 0;
   padding: 0;
 }
-#branding div.block form input.form-text {
+#header div.block form input.form-text {
   width: 140px;
   margin-right: 10px; /* LTR */
 }
-#branding div.block form input.form-submit {
+#header div.block form input.form-submit {
   text-align: center;
   width: 80px;
 }
@@ -237,7 +237,7 @@ pre {
   background: #333;
   padding-top: 20px;
 }
-#branding h1.page-title {
+#header h1.page-title {
   color: #000;
   margin: 0;
   padding-bottom: 10px;
@@ -280,7 +280,8 @@ ul.primary li.active a {
   float: left; /* LTR */
   height: 2.60em;
   line-height: 2.60em;
-  padding: 0 18px 8px;
+  padding: 0 1em 0 1em;
+  margin-top: .5em;
   background-color: #a6a7a2;
   color: #000;
   font-weight: bold;
@@ -340,17 +341,26 @@ ul.secondary li.active a.active {
   color: #fff;
   background: #666;
 }
+
+#sidebar-first {
+  padding: 1em 1em .5em 1em;
+  float: left;
+  width: 20%;
+  border: 1px solid red;
+}
 #content {
-  clear: left;
+  padding: 1em 1em .5em 1em;
+  float: left;
+  width: 75%;
+  border: 1px solid salmon;
 }
 
 /**
  * Page layout.
  */
 #page {
-  padding: 20px 0 40px 0; /* LTR */
-  margin-right: 40px; /* LTR */
-  margin-left: 40px; /* LTR */
+  padding: 0; /* LTR */
+  margin: 0;
   background: #fff;
   position: relative;
   color: #333;
@@ -823,7 +833,7 @@ body.in-maintenance #page {
   margin: 0 auto;
   padding-top: 2em;
 }
-body.in-maintenance #branding h1 {
+body.in-maintenance #header h1 {
   width: 770px;
   margin: 0 auto;
   float: none;
@@ -863,11 +873,11 @@ ol.task-list li.done {
 }
 
 /* Overlay theming */
-.overlay #branding {
+.overlay #header {
   background-color: #fff;
   padding-top: 15px;
 }
-.overlay #branding h1.page-title,
+.overlay #header h1.page-title,
 .overlay #left,
 .overlay #footer {
   display: none;
@@ -876,7 +886,7 @@ ol.task-list li.done {
   margin: 0;
   padding: 0 20px;
 }
-.overlay #branding div.breadcrumb {
+.overlay #header div.breadcrumb {
   float: left; /* LTR */
   position: relative;
   z-index: 10;
