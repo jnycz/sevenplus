@@ -1,3 +1,74 @@
+/* Google Font */
+
+@import url(http://fonts.googleapis.com/css?family=Open+Sans:400,700);
+
+/* Icomoon */
+@font-face {
+  font-family: 'icomoon';
+  src:url('fonts/icomoon.eot?x2vdhh');
+  src:url('fonts/icomoon.eot?#iefixx2vdhh') format('embedded-opentype'),
+  url('fonts/icomoon.woff?x2vdhh') format('woff'),
+  url('fonts/icomoon.ttf?x2vdhh') format('truetype'),
+  url('fonts/icomoon.svg?x2vdhh#icomoon') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+[class^="icon-"], [class*=" icon-"] {
+  font-family: 'icomoon';
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-caret-left:before {
+  content: "\f0d9";
+}
+.icon-caret-right:before {
+  content: "\f0da";
+}
+.icon-sort-down:before {
+  content: "\f0dd";
+}
+.icon-sort-up:before {
+  content: "\f0de";
+}
+.icon-chevron-circle-left:before {
+  content: "\f137";
+}
+.icon-chevron-circle-right:before {
+  content: "\f138";
+}
+.icon-chevron-circle-up:before {
+  content: "\f139";
+}
+.icon-chevron-circle-down:before {
+  content: "\f13a";
+}
+.icon-chevron-left:before {
+  content: "\e600";
+}
+.icon-chevron-right:before {
+  content: "\e601";
+}
+.icon-plus:before {
+  content: "\e602";
+}
+.icon-checkmark:before {
+  content: "\e603";
+}
+.icon-cancel:before {
+  content: "\e604";
+}
+
+
 
 /**
  * Generic elements.
@@ -5,7 +76,9 @@
 body {
   color: #000;
   background: #fff;
-  font: normal 81.3%/1.538em "Lucida Grande", "Lucida Sans Unicode", sans-serif;
+  font-family: "Open Sans", "Helvetica", Helvetica, sans-serif;
+  font-size: 15px;
+  line-height: 20px;
 }
 a {
   color: #0074BD;
@@ -145,6 +218,7 @@ pre {
   white-space: pre-wrap;
 }
 
+
 /**
  * Skip link.
  */
@@ -178,12 +252,13 @@ pre {
   outline: 0;
 }
 
+
 /**
  * Branding.
  */
 #header {
   overflow: hidden;
-  padding: 1em 1em .5em 1em; /* LTR */
+  padding: 1.5em 1em 1.5em 1em; /* LTR */
   position: relative;
   background-color: #e0e0d8;
 }
@@ -256,19 +331,21 @@ pre {
 /**
  * Tabs.
  */
+
 ul.primary {
-  float: right; /* LTR */
+  position: absolute;
+  top: 1.5em;
+  right: 1em;
   border-bottom: none;
   text-transform: uppercase;
   font-size: 0.923em;
-  height: 2.60em;
   margin: 0;
   padding-top: 0;
 }
 ul.primary li {
   float: left; /* LTR */
   list-style: none;
-  margin: 0 2px;
+  margin: 0 0 0 1em;
 }
 ul.primary li a:link,
 ul.primary li a.active,
@@ -281,7 +358,6 @@ ul.primary li.active a {
   height: 2.60em;
   line-height: 2.60em;
   padding: 0 1em 0 1em;
-  margin-top: .5em;
   background-color: #a6a7a2;
   color: #000;
   font-weight: bold;
@@ -291,14 +367,17 @@ ul.primary li.active a {
   -moz-border-radius: 8px 8px 0 0;
   -webkit-border-top-left-radius: 8px;
   -webkit-border-top-right-radius: 8px;
-  border-radius: 8px 8px 0 0;
+  border-radius: 8px;
 }
 ul.primary li.active a,
 ul.primary li.active a.active,
 ul.primary li.active a:active,
 ul.primary li.active a:visited {
   background-color: #fff;
-  border-color: #c9cac4;
+  border: none;
+  -webkit-box-shadow: 0px -1px 10px 0px rgba(255, 255, 255, 0.75);
+  -moz-box-shadow:    0px -1px 10px 0px rgba(255, 255, 255, 0.75);
+  box-shadow:         0px -1px 10px 0px rgba(255, 255, 255, 0.75);
 }
 ul.primary li a:hover {
   color: #fff;
@@ -309,20 +388,22 @@ ul.primary li.active a:hover {
 .tabs-secondary {
   clear: both;
 }
+
 ul.secondary {
-  float: right; /* LTR */
+  position: absolute;
+  top: 5em;
+  right: 1em;
   font-size: 0.923em;
   padding: 0 3px 5px;
   line-height: 1.385em;
   overflow: hidden;
-  background-color: #fff;
 }
 ul.secondary li {
   margin: 0 5px;
   float: none; /* LTR */
 }
 ul.secondary li a {
-  background-color: #ddd;
+  background-color: #bdbdbd;
   color: #000;
   display: inline-block;
 }
@@ -402,9 +483,23 @@ ul.admin-list li {
   border-top: 1px solid #ccc;
   margin-left: 0; /* LTR */
   margin-bottom: 10px;
-  background: url(images/list-item.png) no-repeat 0 11px; /* LTR */
-  list-style-type: none;
-  list-style-image: none;
+  list-style: none none;
+}
+ul.admin-list li:before {
+  font-family: 'icomoon';
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  content: "\f138";
+  margin-left: -1.5em;
+  padding-right: .5em;
 }
 .admin-panel .item-list ul,
 ul.admin-list {
@@ -670,16 +765,7 @@ a.button {
   color: #5a5a5a;
   text-align: center;
   font-weight: normal;
-  font-size: 1.077em;
-  font-family: "Lucida Grande", Verdana, sans-serif;
-  border: 1px solid #e4e4e4;
-  border-bottom: 1px solid #b4b4b4;
-  border-left-color: #d2d2d2;
-  border-right-color: #d2d2d2;
-  background: url(images/buttons.png) 0 0 repeat-x;
-  -moz-border-radius: 20px;
-  -webkit-border-radius: 20px;
-  border-radius: 20px;
+  border-radius: 8px;
 }
 a.button:link,
 a.button:visited,

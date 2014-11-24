@@ -8,13 +8,12 @@
     <?php endif; ?>
     <?php print render($title_suffix); ?>
     <?php print render($primary_local_tasks); ?>
-  </div>
-
-  <div id="main">
-
     <?php if ($secondary_local_tasks): ?>
       <div class="tabs-secondary clearfix"><?php print render($secondary_local_tasks); ?></div>
     <?php endif; ?>
+  </div>
+
+  <div id="main">
 
     <?php if(render($page['sidebar_first'])): ?>
       <div id="sidebar-first">
